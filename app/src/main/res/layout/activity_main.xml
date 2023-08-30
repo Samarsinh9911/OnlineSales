@@ -1,0 +1,58 @@
+<?xml version = "1.0" encoding = "utf-8"?>
+<RelativeLayout xmlns:android = "http://schemas.android.com/apk/res/android"
+    xmlns:app = "http://schemas.android.com/apk/res-auto"
+    xmlns:tools = "http://schemas.android.com/tools"
+    android:layout_width = "match_parent"
+    android:layout_height = "match_parent"
+    tools:context = ".MainActivity">
+
+    <EditText
+        android:id="@+id/equationEditText"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="16dp"
+        android:layout_marginBottom="16dp"
+        android:hint="Enter the Expression"
+        android:textColor="#FF5722" />
+
+    <TextView
+        android:shadowColor = "#2d2d2d"
+        android:shadowDx = "2"
+        android:shadowDy = "2"
+        android:shadowRadius = "2"
+        android:layout_margin = "16dp"
+        android:textColor = "#0DE162"
+        android:textSize = "32dp"
+        android:foregroundGravity = "center"
+        android:gravity = "center_horizontal"
+        android:id = "@+id/textViewResult"
+        android:layout_centerInParent = "true"
+        android:layout_width = "match_parent"
+        android:layout_height = "wrap_content"/>
+
+    <Button
+        android:background = "#077DDA"
+        android:onClick = "sol"
+        android:text = "Solve   :)"
+        android:layout_margin = "16dp"
+        android:layout_below = "@id/equationEditText"
+        android:layout_width = "match_parent"
+        android:layout_height = "wrap_content"/>
+
+    <!-- activity_main.xml -->
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/historyRecyclerView"
+        android:layout_width="300dp"
+        android:layout_height="500dp"
+        android:layout_below="@+id/textViewResult"
+        android:layout_marginStart="50dp"
+        android:layout_marginTop="31dp"
+        android:layout_marginEnd="50dp"
+        android:layout_marginBottom="50dp"
+        android:gravity="bottom"
+        app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager" />
+
+
+</RelativeLayout>
